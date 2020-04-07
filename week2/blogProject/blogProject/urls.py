@@ -1,4 +1,4 @@
-"""week3 URL Configuration
+"""blogProject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import blog.views
+import blogapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', blog.views.home, name="home"),
-    path('blog/<int:blog_id>', blog.views.detail, name="detail"),
+    path('', blogapp.views.home, name="home"),
+    path('blog/<int:blog_id>', blogapp.views.detail, name="detail"),
 ]
-# path converter : <type : 변수이름>
