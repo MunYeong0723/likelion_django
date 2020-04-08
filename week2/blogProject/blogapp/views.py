@@ -24,3 +24,4 @@ def create(request):
     blog.save()
     return redirect('/blog/'+str(blog.id))
 # redirect(URL) : 위에서 완성한 데이터를 parameter로 있는 URL로 넘기는 함수
+
