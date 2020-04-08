@@ -40,16 +40,16 @@
         </form>
       </div>
     </nav>
+    <br>
     <div class="container">
-        <br>
-        <h1>자세한 내용을 알려주는 페이지입니다.</h1>
-        <br><br>
-
-        <h1>{{ blog_detail.title }}</h1>
-        <p>{{ blog_detail.pub_date }}</p>
-        <p>{{ blog_detail.body }}</p>
-        <br>
+        <form action="{% url 'create' %}">
+            <h4>제목 : </h4>
+            <input type="text" name="title">
+            <br><br>
+            <h4>본문 : </h4>
+            <textarea cols=40 rows=10 name="body"></textarea>
+            <br><br>
+            <input class="btn btn-dark" type="submit" value="제출하기">
+        </form>
     </div>
 </body>
-
-
