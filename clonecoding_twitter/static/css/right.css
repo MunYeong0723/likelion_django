@@ -1,0 +1,83 @@
+/*.loginForm {*/
+/*    margin: 0px 10%;*/
+/*    height : 60px;*/
+/*}*/
+/*.login {*/
+/*    font-size: 15px;*/
+/*    display:inline-block;*/
+/*    background-color : rgb(245, 248, 250);*/
+/*    width : 35%;*/
+/*    height : 55px;*/
+/*    border-bottom : 2px solid rgb(101, 119, 134);*/
+/*    margin-left: 15px;*/
+/*    padding-left : 10px;*/
+/*    color : #7F7E7D;*/
+/*}*/
+/*.login .text {*/
+/*    border : none;*/
+/*    width : 100%;*/
+/*    background-color : rgb(245, 248, 250);*/
+/*    height : 25px;*/
+/*}*/
+
+/*.text:focus {*/
+/*    outline:  none;*/
+/*}*/
+
+/*.button {*/
+/*    border-radius:28px;*/
+/*    border:1px solid rgb(29, 161, 242);*/
+/*    display:inline-block;*/
+/*    color:rgb(29, 161, 242);*/
+/*    font-weight : bold;*/
+/*    font-size:15px;*/
+/*    padding:7px 17px;*/
+/*    position : absolute;*/
+/*    bottom : 10px;*/
+/*}*/
+/*.button:hover {*/
+/*    background-color: rgba(26, 145, 218, 0.2);*/
+/*}*/
+
+/*.findPassword {*/
+/*    margin-left: 41%;*/
+/*    padding-top: 7px;*/
+/*    color : rgb(29, 161, 242);*/
+/*    font-size : 12px;*/
+/*}*/
+
+.content2 {
+    margin-top: 10px;
+    font-size : 30px;
+    font-weight : bold;
+}
+
+.content3 {
+    margin-top: 30px;
+    font-size : 15px;
+}
+
+.myButton {
+    margin-top : 10px;
+    border-radius:21px;
+    font-size: 15px;
+    font-weight : bold;
+    text-align: center;
+    background-color:#2dabf9;
+    color:#ffffff;
+    width: 100%;
+}
+
+.myButton:hover {
+    background-color: rgb(26,145,218);
+}
+
+.colorChange {
+    border : 1px solid #2dabf9;
+    color: #2dabf9;
+    background-color: white;
+}
+
+.colorChange:hover {
+    background-color: rgba(26, 145, 218, 0.2);
+}

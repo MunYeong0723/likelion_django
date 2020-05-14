@@ -1,4 +1,4 @@
-
+{% load static %}
 <head>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,224 +13,15 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/right.css">
-    <style>
-      .left, .right {
-        display : inline-block
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-      }
-
-      a{
-        text-decoration: none;
-        color : inherit;
-      }
-
-      .loginForm {
-        margin: 0px 10%;
-        height : 60px;
-      }
-      .login {
-        font-size: 15px;
-        display:inline-block;
-        background-color : rgb(245, 248, 250);
-        width : 35%;
-        height : 55px;
-        border-bottom : 2px solid rgb(101, 119, 134);
-        margin-left: 15px;
-        padding-left : 10px;
-        color : #7F7E7D;
-      }
-
-
-
-      .login .text {
-        border : none;
-        width : 100%;
-        background-color : rgb(245, 248, 250);
-        height : 25px;
-      }
-
-      .text:focus {
-        outline:  none;
-      }
-
-      .button {
-      border-radius:28px;
-      border:1px solid rgb(29, 161, 242);
-      display:inline-block;
-      color:rgb(29, 161, 242);
-      font-weight : bold;
-      font-size:15px;
-      padding:7px 17px;
-      position : relative;
-      bottom : 10px;
-      }
-      .button:hover {
-      background-color: rgba(26, 145, 218, 0.2);
-      }
-
-      .findPassword {
-      margin-left: 41%;
-      padding-top: 7px;
-      color : rgb(29, 161, 242);
-      font-size : 12px;
-
-      }
-
-
-      .content {
-      width: 380px;
-      height: 340px;
-      margin: 130px auto;
-      }
-
-      .content2 {
-      margin-top: 10px;
-      font-size : 30px;
-      font-weight : bold;
-      }
-
-      .content3 {
-      margin-top: 30px;
-      font-size : 15px;
-
-      }
-
-      .myButton {
-      margin-top : 10px;
-      border-radius:21px;
-      display:inline-block;
-      font-size: 15px;
-      font-weight : bold;
-      padding:9px 160px;
-      background-color:#2dabf9;
-      color:#ffffff;
-      width: 100%;
-      }
-
-      .myButton:hover {
-      background-color: rgb(26,145,218);
-      }
-
-      .colorChange {
-      border : 1px solid #2dabf9;
-      color: #2dabf9;
-      background-color: white;
-      }
-
-      .colorChange:hover {
-      background-color: rgba(26, 145, 218, 0.2);
-      }
-      .right {
-          position : relative;
-          top : -48px;
-          width : 49%;
-      }
-
-
-        .left {
-            background-color: rgb(113, 201, 248);
-            -webkit-box-pack: center;
-            justify-content: center;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            padding: 15px;
-            width: 50%;
-        }
-
-        .left_in {
-            max-width: 380px;
-            align-self: center;
-            padding: 108px 92px;
-        }
-
-        .box {
-            margin-bottom: 40px;
-            align-self: center;
-            padding-bottom: 15px;
-            padding-top: 15px;
-        }
-
-        .img {
-            font-size: 23px;
-            color: rgb(255, 255, 255);
-            flex-shrink: 0;
-            vertical-align: text-bottom;
-            position: relative;
-            max-width: 100%;
-            height: 1.25em;
-            fill: currentcolor;
-            display: inline-block;
-            overflow: hidden;
-        }
-
-        .word {
-            margin-left: 15px;
-            line-height: 30px;
-            font-size: 19px;
-            font-weight: bold;
-            color: rgb(255, 255, 255);
-            overflow-wrap: break-word;
-            min-width: 0px;
-            line-height: 1.3125;
-        }
-
-
-        .upper {
-            font-size: 14px;
-            background-color: #ccd6dd;
-            height: 62px;
-            line-height: 20px;
-            display: flex;
-        }
-
-        .upper .contents {
-            margin: 0 auto;
-            width: 1155px;
-            padding: 0 15px;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-
-        }
-
-        .upper a {
-            color: #1c94e0;
-        }
-
-        .lower {
-            color: #aab8c2;
-            font-size: 12px;
-            border-top: 1px solid #e6ecf0;
-            padding: 11px 0;
-            background-color: #fff;
-            line-height: 20px;
-        }
-
-        .lower .contents {
-            margin: 0 auto;
-            width: auto;
-            padding: 0 15px;
-            line-height: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .lower a {
-            padding: 0 9px 0 9px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/left.css' %}">
+    <link rel="stylesheet" href="{% static 'css/right.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bottom.css' %}">
 </head>
 
-<div class="main">
+<div id="header">
     <div class="left">
-        <div class="left_in">
+        <div class="left_in content">
             <div class="box">
                 <i class="fas fa-search img"></i>
                 <span class="word">관심사를 팔로우하세요.</span>
@@ -246,48 +37,48 @@
         </div>
     </div>
     <div class="right">
-      <div class="loginForm">
-        <form class="" action="{% url 'login' %}" method="POST"> {% csrf_token %}
-          <span class="login" id="email">
-            휴대폰,이메일
-            <input class="text" type="text" name="email" onfocus="changeColor1()" onblur="backColor1()">
-          </span>
-          <span class="login" id="password">
-            <div class="">
-            비밀번호
-            </div>
-            <input class="text" type="password" name="password" value="" onfocus="changeColor2()" onblur="backColor2()">
-          </span>
-            <input type="submit" class="button" name="" value="로그인">
-            <div class="findPassword">
-              <a href="#">비밀번호를 잊으셨나요 ?</a> {# TODO #}
-            </div>
-        </form>
-      </div>
-      <div class="content">
-        <span style="color: #2dabf9"><i class="fab fa-twitter fa-3x"></i></span>
+{#        <div class="loginForm">#}
+{#            <form class="" action="{% url 'login' %}" method="POST"> {% csrf_token %}#}
+{#                <span class="login" id="email">#}
+{#            휴대폰,이메일#}
+{#            <input class="text" type="text" name="email" onfocus="changeColor1()" onblur="backColor1()">#}
+{#          </span>#}
+{#                <span class="login" id="password">#}
+{#            <div class="">#}
+{#            비밀번호#}
+{#            </div>#}
+{#            <input class="text" type="password" name="password" value="" onfocus="changeColor2()" onblur="backColor2()">#}
+{#          </span>#}
+{#                <input type="submit" class="button" name="" value="로그인">#}
+{#                <div class="findPassword">#}
+{#                    <a href="#">비밀번호를 잊으셨나요 ?</a> {# TODO #}
+{#                </div>#}
+{#            </form>#}
+{#        </div>#}
+        <div class="right_in content">
+            <span style="color: #2dabf9"><i class="fab fa-twitter fa-3x"></i></span>
 
-        <div class="content2">
-          <p>
-            지금 전 세계에서 무슨 일이 일어나고 있는지 알아보세요
-          </p>
-          <p class="content3">
-            오늘 트위터에 가입해 보세요
-          </p>
+            <div class="content2">
+                <p>
+                    지금 전 세계에서 무슨 일이 일어나고 있는지 알아보세요
+                </p>
+                <p class="content3">
+                    오늘 트위터에 가입해 보세요
+                </p>
+            </div>
+            <div class="myButton"><a href="{% url 'signup' %}" ><span>가입하기</span></a></div>
+            <div class="myButton colorChange"><a href="{% url 'login' %}" ><span>로그인  </span></a></div>
         </div>
-      <div class="myButton"><a href="{% url 'signup' %}" ><span>가입하기</span></a></div>
-      <div class="myButton colorChange"><a href="{% url 'login' %}" ><span>로그인  </span></a></div>
-      </div>
 
     </div>
 </div>
 
 <div class="footer" style="width: 100%; font-family: 'Nanum Gothic', sans-serif;">
-    <div class="upper">
-        <div class="contents">최적의 트위터 사용 환경을 위하여 <a href="microsoft-edge:https://twitter.com">Microsoft Edge</a>를 사용하거나
-            <a href="https://www.microsoft.com/en-us/store/p/twitter/9wzdncrfj140">Microsoft 스토어</a>에서 트위터 앱을 설치하세요.
-        </div>
-    </div>
+{#    <div class="upper">#}
+{#        <div class="contents">최적의 트위터 사용 환경을 위하여 <a href="microsoft-edge:https://twitter.com">Microsoft Edge</a>를 사용하거나#}
+{#            <a href="https://www.microsoft.com/en-us/store/p/twitter/9wzdncrfj140">Microsoft 스토어</a>에서 트위터 앱을 설치하세요.#}
+{#        </div>#}
+{#    </div>#}
     <div class="lower">
         <div class="contents">
             <a> 회사 소개 </a>
@@ -314,23 +105,23 @@
 
 
 <script type="text/javascript">
-  var elem = document.getElementById('email');
-  var elem2 = document.getElementById('password');
+    var elem = document.getElementById('email');
+    var elem2 = document.getElementById('password');
 
-  function changeColor1() {
-    elem.style.color = 'rgb(29, 161, 242)';
-  }
+    function changeColor1() {
+        elem.style.color = 'rgb(29, 161, 242)';
+    }
 
-  function backColor1() {
-    elem.style.color = '#7F7E7D';
-  }
+    function backColor1() {
+        elem.style.color = '#7F7E7D';
+    }
 
-  function changeColor2() {
-    elem2.style.color = 'rgb(29, 161, 242)';
-  }
+    function changeColor2() {
+        elem2.style.color = 'rgb(29, 161, 242)';
+    }
 
-  function backColor2() {
-    elem2.style.color = '#7F7E7D';
-  }
+    function backColor2() {
+        elem2.style.color = '#7F7E7D';
+    }
 </script>
 </body>
