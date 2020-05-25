@@ -46,3 +46,6 @@ def blogpost(request):
         # 2. 빈 페이지를 띄워주는 기능 -> GET
         form = BlogPost()
         return render(request, 'new.html', {'form': form})
+
+def maps(request):
+    return render(request, 'maps.html')
