@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.core.paginator import Paginator
-from .models import Blog
+from .models import Blog, Pictures
 from .form import BlogPost
 
 # Create your views here.
@@ -49,3 +49,8 @@ def blogpost(request):
 
 def maps(request):
     return render(request, 'maps.html')
+
+def pictures(request):
+    picture = Pictures.objects
+    return render(request, 'pictures.html', {'picture': picture})
+

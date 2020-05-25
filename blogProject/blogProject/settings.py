@@ -49,6 +49,9 @@ INSTALLED_APPS = [
 
     # provider -> social login 기능을 제공해주는 업체 (ex. 구글,페이스북,카톡,깃헙,네이버 등), 여기서는 구글을 사용함.
     'allauth.socialaccount.providers.google',
+
+    # for Thumbnail
+    'imagekit',
 ]
 
 MIDDLEWARE = [

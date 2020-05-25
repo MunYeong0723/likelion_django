@@ -18,6 +18,8 @@ from django.urls import path, include
 import blogapp.views
 import portfolio.views
 import accounts.views
+
+# for media file
 from django.conf import settings
 from django.conf.urls.static import static
 
