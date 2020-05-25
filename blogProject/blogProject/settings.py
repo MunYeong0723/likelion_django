@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -40,6 +41,14 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'portfolio.apps.PortfolioConfig',
     'accounts.apps.AccountsConfig',
+
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # provider -> social login 기능을 제공해주는 업체 (ex. 구글,페이스북,카톡,깃헙,네이버 등), 여기서는 구글을 사용함.
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +143,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # base directory에 media라는 directory로 media파일을 모을 것이다
 
 MEDIA_URL = '/media/'
+
+
+# allauth
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django.admin, regardless of 'allauth'
+    'django.contrib.auth.backends.ModelBackend',
+
+    # 'allauth' specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/' # 오류가 나면 어느 URL로 redirect될 것인지 (여기서는 홈으로 가고 싶음)
+
